@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medic_here/features/auth/screen/auth_screen.dart';
+import 'package:medic_here/home/screen/home_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
@@ -7,6 +8,11 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => const AuthScreen(),
+      );
+          case HomeScreen.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => const HomeScreen(),
       );
     default:
       return MaterialPageRoute(

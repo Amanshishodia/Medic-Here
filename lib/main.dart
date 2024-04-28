@@ -1,10 +1,14 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:medic_here/constant/globar_variable.dart';
 import 'package:medic_here/features/auth/screen/auth_screen.dart';
+import 'package:medic_here/providers/user_provider.dart';
 import 'package:medic_here/router.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [ChangeNotifierProvider(create:  (context)=>UserProvider(),),],child:  MyApp()));
 }
 
 class MyApp extends StatelessWidget {
