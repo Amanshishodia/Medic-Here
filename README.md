@@ -1,6 +1,6 @@
 # medic_here
 
-A new Flutter project.
+A Cross platform Application for pharmacist to buy the medicide in the bulk for saving the time and money Resources with the Admin Panel .
 
 ## Getting Started
 
