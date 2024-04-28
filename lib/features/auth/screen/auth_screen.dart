@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:medic_here/common/widgets/custom.button.dart';
 import 'package:medic_here/common/widgets/custom_textfield.dart';
 import 'package:medic_here/constant/globar_variable.dart';
+import 'package:medic_here/features/auth/services/auth_service.dart';
 
 enum Auth {
   signin,
@@ -24,7 +25,7 @@ class _AuthScreenState extends State<AuthScreen> {
   Auth _auth = Auth.signup;
   final _signUpFormKey = GlobalKey<FormState>();
   final _signInFormKey = GlobalKey<FormState>();
-  // final AuthService authService = AuthService();
+   final AuthService authService = AuthService();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
@@ -37,14 +38,14 @@ class _AuthScreenState extends State<AuthScreen> {
     _nameController.dispose();
   }
 
-  // void signUpUser() {
-  //   authService.signUpUser(
-  //     context: context,
-  //     email: _emailController.text,
-  //     password: _passwordController.text,
-  //     name: _nameController.text,
-  //   );
-  // }
+   void signUpUser() {
+    authService.signUpUser(
+      context: context,
+      email: _emailController.text,
+      password: _passwordController.text,
+      name: _nameController.text,
+    );
+  }
 
   // void signInUser() {
   //   authService.signInUser(
@@ -119,7 +120,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           text: 'Sign Up',
                           onTap: () {
                             if (_signUpFormKey.currentState!.validate()) {
-                              // signUpUser();
+                               signUpUser();
                             }
                           },
                         )
