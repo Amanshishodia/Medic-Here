@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medic_here/common/widgets/bottom_bar.dart';
 
 import 'package:medic_here/constant/globar_variable.dart';
+import 'package:medic_here/features/admin/screens/admin_screen.dart';
 import 'package:medic_here/features/auth/screen/auth_screen.dart';
 import 'package:medic_here/features/auth/services/auth_service.dart';
 import 'package:medic_here/home/screen/home_screen.dart';
@@ -52,8 +53,10 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true, // can remove this line
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const BottomBar()
+     home: Provider.of<UserProvider>(context).user.token.isNotEmpty
+          ? Provider.of<UserProvider>(context).user.type == 'user'
+              ? const BottomBar()
+              : const AdminScreen()
           : const AuthScreen(),
     );
   }
