@@ -19,33 +19,32 @@ class GlobalVariables {
   static const unselectedNavBarColor = Colors.black87;
 
   static const List<String> carouselImages = [
-    'https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/TS/D37847648_Accessories_savingdays_Jan22_Cat_PC_1500.jpg',
-    'https://images-eu.ssl-images-amazon.com/images/G/31/img2021/Vday/bwl/English.jpg',
-    'https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/AdvantagePrime/BAU/14thJan/D37196025_IN_WL_AdvantageJustforPrime_Jan_Mob_ingress-banner_1242x450.jpg',
-    'https://images-na.ssl-images-amazon.com/images/G/31/Symbol/2020/00NEW/1242_450Banners/PL31_copy._CB432483346_.jpg',
-    'https://images-na.ssl-images-amazon.com/images/G/31/img21/shoes/September/SSW/pc-header._CB641971330_.jpg',
+    'https://img.freepik.com/free-vector/pharmacy-interior-flat-background-with-visitors-pharmacist-staff-white-coats-consulting-people-vector-illustration_1284-72274.jpg?t=st=1715366178~exp=1715369778~hmac=d5bcdbafe7bd1528cc208ce722a6bb109e19a98e79ca6063b5dd16731f856def&w=1380',
+    'https://img.freepik.com/free-vector/black-pharmacist-shop-counter-drugstore-vector_107791-21155.jpg?t=st=1715366246~exp=1715369846~hmac=4affe478d08f3e22fad108d863959862f15edf3cd7aa43035a7c4d24c478ab2f&w=1380',
+    'https://img.freepik.com/free-vector/pharmacist_23-2148185551.jpg?t=st=1715365952~exp=1715369552~hmac=5b98c7b65201dd4376a6d7bd9b6e6375b37a9fccd221b374f297c873545270a0&w=740',
+    'https://img.freepik.com/free-photo/young-woman-pharmacist-pharmacy_1303-25544.jpg?t=st=1715365785~exp=1715369385~hmac=ab1b8db041b4dd1fb6271efa3d9d3c3a3c8c73eb63d087e69d5e66e2fc69ec18&w=996',
   ];
 
   static const List<Map<String, String>> categoryImages = [
     {
-      'title': 'Mobiles',
-      'image': 'assets/images/mobiles.jpeg',
+      'title': ' Medicine',
+      'image': 'assets/images/medicine.png',
     },
     {
       'title': 'Essentials',
       'image': 'assets/images/essentials.jpeg',
     },
     {
-      'title': 'Appliances',
-      'image': 'assets/images/appliances.jpeg',
+      'title': 'Sexual',
+      'image': 'assets/images/sexual.png',
     },
     {
-      'title': 'Books',
-      'image': 'assets/images/books.jpeg',
+      'title': 'Body Care',
+      'image': 'assets/images/body.png',
     },
     {
-      'title': 'Fashion',
-      'image': 'assets/images/fashion.jpeg',
+      'title': 'Baby',
+      'image': 'assets/images/baby.png',
     },
   ];
 }

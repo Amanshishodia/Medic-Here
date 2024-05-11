@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medic_here/constant/globar_variable.dart';
 import 'package:medic_here/features/account/screens/account_screen.dart';
+import 'package:medic_here/features/cart/screens/cart_screen.dart';
 import 'package:medic_here/home/screen/home_screen.dart';
 import 'package:medic_here/providers/user_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:badges/badges.dart' as badges;
 
 class BottomBar extends StatefulWidget {
   static const String routeName = '/actual-home';
@@ -21,7 +23,7 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget> pages = [
     const HomeScreen(),
     const AccountScreen(),
-    const Center(child: Text('Cart Oage')),
+    const CartScreen(),
   ];
 
   void updatePage(int page) {
@@ -32,7 +34,7 @@ class _BottomBarState extends State<BottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    // final userCartLen = context.watch<UserProvider>().user.cart.length;
+     final userCartLen = context.watch<UserProvider>().user.cart.length;
 
     return Scaffold(
       body: pages[_page],
@@ -100,7 +102,7 @@ class _BottomBarState extends State<BottomBar> {
               ),
               child: Badge(
                 // elevation: 0,
-                // badgeContent: Text('2'),
+               //  badgeContent: Text(userCartLen.toString()),
                 // badgeColor: Colors.white,
                 child: Icon(
                   Icons.shopping_cart_outlined,

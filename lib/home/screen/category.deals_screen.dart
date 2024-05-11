@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medic_here/common/widgets/loader.dart';
 import 'package:medic_here/constant/globar_variable.dart';
+import 'package:medic_here/features/product_details/screens/product_details_screen.dart';
 import 'package:medic_here/home/services/home_services.dart';
 import 'package:medic_here/models/product.dart';
 
@@ -83,13 +84,13 @@ class _CategoryDealsScreenState extends State<CategoryDealsScreen> {
                     itemBuilder: (context, index) {
                       final product = productList![index];
                       return GestureDetector(
-                        // onTap: () {
-                        //   Navigator.pushNamed(
-                        //     context,
-                        //     ProductDetailScreen.routeName,
-                        //     arguments: product,
-                        //   );
-                        // },
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            ProductDetailScreen.routeName,
+                            arguments: product,
+                          );
+                        },
                         child: Column(
                           children: [
                             SizedBox(

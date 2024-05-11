@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medic_here/constant/globar_variable.dart';
+import 'package:medic_here/features/admin/screens/analytics_screen.dart';
+import 'package:medic_here/features/admin/screens/order_screen.dart';
 import 'package:medic_here/features/admin/screens/posts_screen.dart';
 
 class AdminScreen extends StatefulWidget {
@@ -16,14 +18,9 @@ class _AdminScreenState extends State<AdminScreen> {
 
   List<Widget> pages = [
     const PostsScreen(),
-    const Center(
-      child: Text('Analytics'),
-    ),
-    const Center(
-      child: Text('Order Screen'),
-    )
-    // const AnalyticsScreen(),
-    // const OrdersScreen(),
+    
+    const AnalyticsScreen(),
+    const OrdersScreen(),
   ];
 
   void updatePage(int page) {
